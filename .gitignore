@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+clinical_data.db
+data/*.jsonl
