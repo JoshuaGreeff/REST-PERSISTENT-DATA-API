@@ -19,8 +19,8 @@ app = Flask(__name__)
 # its first run, without requiring a separate database setup command.
 Base.metadata.create_all(bind=engine)
 
-# JSON Lines keeps one complete JSON record per line, which makes this companion
-# file easy to inspect or use later as a lightweight audit or recovery record.
+# JSON Lines keeps one complete record on each line, so I can easily check that
+# the same clinical data was also saved outside of the database.
 DATA_FILE = Path(os.getenv("CLINICAL_JSONL_FILE", "data/clinical_data.jsonl"))
 DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
 
